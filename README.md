@@ -15,15 +15,15 @@ my $metadata = new AVProbe({
 });
 
 if ($metadata->valid) {
-	# get a list of top-level keys
-	my $listref		= $metadata->keys;
+    # get a list of top-level keys
+    my $listref		= $metadata->keys;
     
     # the following two keys are guaranteed to be present
-   	my $bitrate 	= $metadata->get('bitrate');
-   	my $duration 	= $metadata->get('duration');
+    my $bitrate 	= $metadata->get('bitrate');
+    my $duration 	= $metadata->get('duration');
     
     # get the duration in seconds.
-   	my $runtime		= $metadata->runtime;
+    my $runtime		= $metadata->runtime;
     
     # convenience methods
     my $hash		= $metadata->data;
