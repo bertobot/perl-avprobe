@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+# sample program, expresses metadata as json
+
+use strict;
+use AVProbe;
+
+my $probe = new AVProbe({
+    file => shift,
+});
+
+printf "%s\n", $probe->json;
+
